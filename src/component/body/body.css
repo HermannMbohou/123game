@@ -1,0 +1,58 @@
+.a > .col-3 {
+    width: 8vh;
+    height: 8vh;
+    font-size: 42px;
+}
+
+.a > .col-3:hover {
+    cursor: pointer;
+}
+
+.b > .col-4 {
+    width: 12vh;
+    height: 12vh;
+    font-size: 72px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 5px 2px #d1d1d1;
+}
+
+.row-cols {
+    color: rgb(53, 53, 53);
+    border-radius: 12px;
+    height: 5vh;
+    font-size: 28px;
+}
+
+#congrat {
+    display: none;
+}
+
+#lose {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .a > .col-3 {
+        width: 8vh;
+        height: 8vh;
+        font-size: 32px;
+    }
+    .row-cols {  
+        height: 3vh;
+        font-size: 18px;
+        color: rgb(53, 53, 53);
+    }
+}
+   
+@media only screen and (max-width: 850px) {
+    .a > .col-3 {
+        width: 5vh;
+        height: 5vh;
+        font-size: 28px;
+    }
+    .row-cols {  
+        height: 2vh;
+        font-size: 16px;
+        color: rgb(53, 53, 53);
+    }
+}
