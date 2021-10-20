@@ -35,7 +35,7 @@
     .a > .col-3 {
         width: 8vh;
         height: 8vh;
-        font-size: 32px;
+        font-size: 28px;
     }
     .row-cols {  
         height: 3vh;
@@ -48,7 +48,7 @@
     .a > .col-3 {
         width: 5vh;
         height: 5vh;
-        font-size: 28px;
+        font-size: 24px;
     }
     .row-cols {  
         height: 2vh;

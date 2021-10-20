@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './component/header/header'
 import Footer from './component/footer/footer'
 import Body from './component/body/body'
-import Tile from './component/body/tile'
 import {useState} from 'react'
 
 function App() {

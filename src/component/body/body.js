@@ -4,19 +4,47 @@ import Pastile from './pastile'
 import Tile from './tile'
 
 const Body = ({move, play, insert})=>{
-
-    let list1 = Object.keys(play)
+    const removeBorders = (iid, icolor) => {
+        console.log(iid+' '+icolor); //log
+        let tempPlay = {...list1}
+        setList1(list1 = Object.keys(tempPlay)
         .map(
             (tile, index)=>{
-                let border = ''
-                let color = '#'+ Math.floor(Math.random() * 999999)
-                return <Tile setBorder={()=>handleBoder(index, color)} border={border} key={index} tile={tile} id={index} color={color} />
+                return <Tile
+                            bord={index===iid?'dashed black':''}
+                            remBorders={()=>removeBorders(index)}
+                            key={index}
+                            id={index} />
             }
-        )
+        ))
+        setTileSelected(tileSelected=iid)
+        setColorSelected(colorSelected=icolor)
+    }
+
+    let [colorSelected, setColorSelected] = useState('')
+    let [tileSelected, setTileSelected] = useState('')
+    let [pastTileSelected, setPastTileSelected] = useState('')
+
+    let [plays, setPlay] = useState(play)
+
+    let [list1, setList1] = useState(Object.keys(plays)
+        .map(
+            (tile, index)=>{
+                return <Tile
+                            bord={''}
+                            remBorders={()=>removeBorders(index)}
+                            key={index}
+                            id={index} />
+            }
+        ))
     const list2 = Object.keys(insert)
         .map(
             (pastile, index)=>{
-                return <Pastile key={index} id={index} pid='' />
+                return <Pastile 
+                    key={index}
+                    id={index}
+                    pid={tileSelected!==''?tileSelected:''}
+                    pcolor={colorSelected!==''?colorSelected:''} />
             }
         )
     return (
